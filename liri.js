@@ -7,7 +7,7 @@ var Twitter = require('twitter');
 var keys = require("./keys.js");
 var request = require("request");
 var fs = require('fs');
-//var movieName = commaString.replace(/,/g, "-");
+
 
 
 //variables for command line arguments
