@@ -1,20 +1,17 @@
-console.log("working");
 
+//variables for node packages
 require("dotenv").config();
-
 var Spotify = require('node-spotify-api');
 var Twitter = require('twitter');
 var keys = require("./keys.js");
 var request = require("request");
 var fs = require('fs');
-//var movieName = commaString.replace(/,/g, "-");
+
 
 
 //variables for command line arguments
 var arg1 = process.argv[2]
 var arg2 = process.argv[3]
-
-
 var client = new Twitter(keys.twitter);
 var spotify = new Spotify(keys.spotify);
 
@@ -33,6 +30,7 @@ function movieInfo() {
             "\nThe actors in this movie are:" + movies.Actors + "\n");
     })
 };
+
 //twitter function 
 function twitterInfo() {
     var params = { screen_name: arg2 }; //my username - 'Kyle53452112'
@@ -74,6 +72,7 @@ function dowhatitsays(){
       
           console.log(data);
     })};
+
 //switch for command line input
 switch (arg1) {
     case 'my-tweets':
